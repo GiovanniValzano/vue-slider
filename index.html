@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- stile -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- vue -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.13/dist/vue.js" defer></script>
+    <!-- js -->
+    <script src="js/script.js" defer></script>
+    <!-- bootstrap  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <!-- titolo -->
+    <title>Carosello</title>
+</head>
+<body>
+    <div id="root"> 
+        <div class="sliders">
+            <div class="left-slider">
+                <div v-for= "( obj , i ) in arrImages">
+
+
+                    <h2>{{ obj.title }}</h2>
+                    <p>{{ obj.text }}</p>
+                    <img :src= "obj.image"  class= "immagine-grande" :class= "i === activeIndex ? 'active': '' ">
+					<div class= " text-top " :class= " i === activeIndex ? 'testo-immagine-grande' :'' ">
+                        
+					</div>
+				</div>
+            </div>
+                        
+            <div class="buttons">
+                <i @click ='activeIndex--' class="bi bi-caret-up-square-fill"></i>
+                <i @click ='activeIndex++' class="bi bi-caret-down-square-fill"></i>
+            </div>
+            <div class="right-slider">
+                <div class="controls"></div>
+				<img v-for= "(obj , i) in arrImages" :src= "obj.image" alt="obj.title" class=" thumb-img " :class= " i === activeIndex ? 'active' : '' ">	
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	background-position: center;
+	background-color: #4a414144; backdrop-filter: blur(8px);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+img {
+	object-fit: cover;
+    height: 73px;
+    z-index: 0;
+}
+
+
+.sliders{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    padding: 1rem;
+}
+
+.immagine-grande {
+	position: absolute;
+	inset: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+
+
+.left-slider{
+	position: relative;
+    height: 100%;
+    width: 80%;
+}
+
+.right-slider{
+    position: relative;
+    height: 100%;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    color: rgb(255, 0, 0);
+    font-size: 2em;
+    position: absolute;
+    margin-top: 400px;
+}
+
+.right-slider-img{
+	height: 74px;
+}
+
+.active{
+    display: block;
+}
+
+
+h2 {
+    position: absolute;
+    color: white;
+}
